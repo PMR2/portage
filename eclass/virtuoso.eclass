@@ -19,6 +19,7 @@ esac
 inherit autotools multilib eutils
 
 MY_P="virtuoso-opensource-${PV}"
+DIST_PMR2="https://dist.staging.physiomeproject.org/distfiles"
 
 case ${PV} in
 	*9999*)
@@ -30,7 +31,7 @@ case ${PV} in
 	*)
 		# Use this variable to determine distribution method (live or tarball)
 		TARBALL="${MY_P}.tar.gz"
-		SRC_URI="mirror://sourceforge/virtuoso/${TARBALL} mirror://gentoo/VOS-genpatches-${PV}.tar.bz2"
+		SRC_URI="mirror://sourceforge/virtuoso/${TARBALL} mirror://gentoo/VOS-genpatches-${PV}.tar.bz2 ${DIST_PMR2}/VOS-genpatches-${PV}.tar.bz2"
 		;;
 esac
 
