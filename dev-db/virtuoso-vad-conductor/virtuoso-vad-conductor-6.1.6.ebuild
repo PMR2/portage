@@ -23,7 +23,9 @@ VOS_EXTRACT="
 	binsrc/yacutia
 	binsrc/installer
 	binsrc/vad
-    binsrc/samples/demo
+	binsrc/samples/demo
+	docsrc/images/ui
+	docsrc/vsp/doc
 "
 
 src_configure() {
