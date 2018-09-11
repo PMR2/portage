@@ -19,7 +19,7 @@ esac
 inherit autotools multilib eutils
 
 MY_P="virtuoso-opensource-${PV}"
-DIST_PMR2="https://dist.staging.physiomeproject.org/distfiles"
+DIST_PMR2="https://dist.physiomeproject.org/distfiles"
 
 case ${PV} in
 	*9999*)
