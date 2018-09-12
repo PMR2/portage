@@ -1,0 +1,38 @@
+diff --git a/configure.ac b/configure.ac
+index e6ea3d2..e473d09 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -1609,14 +1609,15 @@ if test "x$with_zlib" != "xinternal"
+ then
+     AC_CHECK_HEADER(zlib.h)
+     AC_CHECK_LIB(z, main, [with_zlib=yes], [with_zlib=internal])
++    AC_CHECK_LIB(minizip, main, [with_zlib=yes], [with_zlib=internal])
+ fi
+ if test "x$with_zlib" = "xinternal"
+ then
+     ZLIB_INC='-I$(top_srcdir)/libsrc/zlib'
+     ZLIB_LIB='$(top_builddir)/libsrc/zlib/libz.la'
+ else
+-    ZLIB_INC=""
+-    ZLIB_LIB="-lz"
++    ZLIB_INC=`pkg-config --cflags zlib minizip`
++    ZLIB_LIB=`pkg-config --libs zlib minizip`
+ fi
+ AC_SUBST(ZLIB_INC)
+ AC_SUBST(ZLIB_LIB)
+diff --git a/libsrc/Wi/bif_file.c b/libsrc/Wi/bif_file.c
+index be5ef60..122a2d9 100644
+--- a/libsrc/Wi/bif_file.c
++++ b/libsrc/Wi/bif_file.c
+@@ -6868,10 +6868,7 @@ signal_error:
+ #define fopen64  fopen
+ #endif
+ 
+-#include "zlib/contrib/minizip/unzip.h"
+-#include "zlib/contrib/minizip/ioapi.h"
+-#include "zlib/contrib/minizip/ioapi.c"
+-#include "zlib/contrib/minizip/unzip.c"
++#include "unzip.h"
+ 
+ static caddr_t
+ bif_unzip_file (caddr_t * qst, caddr_t * err_ret, state_slot_t ** args)

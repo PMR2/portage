@@ -1,0 +1,11 @@
+--- configure.ac.bak	2018-09-12 15:19:57.483272863 +1200
++++ configure.ac	2018-09-12 15:20:03.053297348 +1200
+@@ -41,7 +41,7 @@
+ AC_CONFIG_SRCDIR([libsrc/Dk.h])
+ AC_CONFIG_AUX_DIR([binsrc/config])
+ AC_CONFIG_MACRO_DIR([binsrc/config])
+-AC_CONFIG_HEADER([libsrc/Dk/config.h])
++AM_CONFIG_HEADER([libsrc/Dk/config.h])
+ 
+ #
+ # Version variables
