@@ -54,7 +54,7 @@ DOCS=( AUTHORS ChangeLog CREDITS INSTALL NEWS README )
 
 PATCHES=(
 	"${FILESDIR}/${PN}-6.1.4-unbundle-minizip.patch"
-	"${FILESDIR}/${PN}-6.1.6-am_config_header.patch"
+	"${FILESDIR}/virtuoso-opensource-build-against-openssl-1.1.0.patch"
 )
 
 src_prepare() {
