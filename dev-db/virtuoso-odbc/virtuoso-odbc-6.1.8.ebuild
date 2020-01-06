@@ -16,6 +16,11 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/${PN}-6.1.6-am_config_header.patch"
+	"${FILESDIR}/virtuoso-opensource-build-against-openssl-1.1.0.patch"
+)
+
 VOS_EXTRACT="
 	libsrc/Dk
 	libsrc/Thread
