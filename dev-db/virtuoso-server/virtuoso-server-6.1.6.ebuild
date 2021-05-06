@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.6.ebuild,v 1.7 2014/03/07 03:28:22 creffett Exp $
 
-EAPI=4
+EAPI=5
 
 inherit virtuoso
 
