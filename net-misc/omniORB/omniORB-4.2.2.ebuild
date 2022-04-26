@@ -54,7 +54,7 @@ src_configure() {
 
 src_compile() {
 	cd build || die 'failed to change into the build directory'
-	emake OPTCFLAGS="${CFLAGS}" OPTCXXFLAGS="${CXXFLAGS}"
+	emake OPTCFLAGS="${CFLAGS} -std=gnu89" OPTCXXFLAGS="${CXXFLAGS} -std=c++14"
 }
 
 src_install() {
