@@ -12,7 +12,7 @@
 # This eclass provides common code for splitting Virtuoso OpenSource database
 
 case ${EAPI:-0} in
-	2|3|4|5) : ;;
+	2|3|4|5|6|7) : ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
