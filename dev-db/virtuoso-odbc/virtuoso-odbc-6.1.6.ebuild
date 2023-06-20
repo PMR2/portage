@@ -12,9 +12,11 @@ KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux
 IUSE=""
 
 RDEPEND="
-	>=dev-libs/openssl-0.9.7i:0
+	>=dev-libs/openssl-1.1.0:0
 "
 DEPEND="${RDEPEND}"
+
+DOCS=( AUTHORS ChangeLog CREDITS INSTALL NEWS README )
 
 PATCHES=(
 	"${FILESDIR}/${PN}-6.1.6-am_config_header.patch"
@@ -43,4 +45,6 @@ src_install() {
 
 	# Remove libtool files
 	find "${ED}" -name '*.la' -delete
+	# and unrelated documentation files.
+	find "${ED}"/usr/share/doc/virtuoso -delete
 }

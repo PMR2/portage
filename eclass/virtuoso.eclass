@@ -12,7 +12,7 @@
 # This eclass provides common code for splitting Virtuoso OpenSource database
 
 case ${EAPI:-0} in
-	2|3|4|5|6|7) : ;;
+	5|6|7) : ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
@@ -59,13 +59,8 @@ S="${WORKDIR}/${MY_P}"
 virtuoso_src_prepare() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	EPATCH_SUFFIX='patch' EPATCH_FORCE='yes' epatch
-	pushd "${S}" >/dev/null
-	[[ ${PATCHES[@]} ]] && epatch "${PATCHES[@]}"
-
-	debug-print "$FUNCNAME: applying user patches"
-	epatch_user
-
+	eapply "${PATCHES[@]}"
+	eapply_user
 
 	# @ECLASS-VARIABLE: VOS_EXTRACT
 	# @DESCRIPTION:

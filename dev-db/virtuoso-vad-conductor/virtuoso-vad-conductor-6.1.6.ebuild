@@ -46,4 +46,6 @@ src_install() {
 
 	# Remove libtool files
 	find "${ED}" -name '*.la' -delete
+	# and unrelated documentation files.
+	find "${ED}"/usr/share/doc/virtuoso -delete
 }
