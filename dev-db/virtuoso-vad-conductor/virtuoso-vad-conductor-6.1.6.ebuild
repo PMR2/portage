@@ -17,6 +17,8 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
+DOCS=( AUTHORS ChangeLog CREDITS INSTALL NEWS README )
+
 PATCHES=( "${FILESDIR}/${PN}-6.1.6-am_config_header.patch" )
 
 VOS_EXTRACT="
