@@ -43,7 +43,7 @@ LICENSE='GPL-2'
 SLOT='0'
 
 DEPEND='
-	>=sys-devel/libtool-2.2.6a
+	>=dev-build/libtool-2.2.6a
 '
 RDEPEND=''
 
