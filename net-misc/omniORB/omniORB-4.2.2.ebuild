@@ -8,7 +8,7 @@ inherit python-utils-r1
 MY_P="${P/_p/-}"
 DESCRIPTION="A robust, high-performance CORBA 2 ORB"
 HOMEPAGE="http://omniorb.sourceforge.net/"
-SRC_URI="mirror://sourceforge/omniorb/${MY_P}.tar.bz2"
+SRC_URI="https://dist.physiomeproject.org/distfiles/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
