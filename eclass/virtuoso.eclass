@@ -16,7 +16,7 @@ case ${EAPI:-0} in
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
-inherit autotools multilib eutils
+inherit autotools multilib eutils flag-o-matic
 
 MY_P="virtuoso-opensource-${PV}"
 DIST_PMR2="https://dist.physiomeproject.org/distfiles"
@@ -109,6 +109,8 @@ virtuoso_src_prepare() {
 # Runs ./configure with common and user options specified via myconf variable
 virtuoso_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
+
+	append-cflags -Wno-error=incompatible-pointer-types -Wno-error=implicit-function-declaration
 
 	# Override some variables to make tests work
 	if [[ ${PN} != virtuoso-server ]]; then
