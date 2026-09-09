@@ -53,8 +53,8 @@ VOS_EXTRACT="
 DOCS=( AUTHORS ChangeLog CREDITS INSTALL NEWS README )
 
 PATCHES=(
-	"${FILESDIR}/${PN}-6.1.4-unbundle-minizip.patch"
 	"${FILESDIR}/virtuoso-opensource-build-against-openssl-1.1.0.patch"
+	"${FILESDIR}/virtuoso-gcc-15-bison-3.8.patch"
 )
 
 src_prepare() {

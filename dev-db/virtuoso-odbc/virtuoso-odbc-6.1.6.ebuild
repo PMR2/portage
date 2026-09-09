@@ -21,6 +21,7 @@ DOCS=( AUTHORS ChangeLog CREDITS INSTALL NEWS README )
 PATCHES=(
 	"${FILESDIR}/${PN}-6.1.6-am_config_header.patch"
 	"${FILESDIR}/virtuoso-opensource-build-against-openssl-1.1.0.patch"
+	"${FILESDIR}/virtuoso-gcc-15-bison-3.8.patch"
 )
 
 VOS_EXTRACT="
