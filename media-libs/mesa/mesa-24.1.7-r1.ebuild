@@ -191,6 +191,10 @@ x86? (
 	usr/lib/libGLX_mesa.so.0.0.0
 )"
 
+PATCHES=(
+	"${FILESDIR}"/${P}-glibc-2.43.patch
+)
+
 src_unpack() {
 	if [[ ${PV} == 9999 ]]; then
 		git-r3_src_unpack
